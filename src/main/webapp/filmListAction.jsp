@@ -40,18 +40,60 @@
 	
 	<body>
 		<h1>필름 목록(검색 : 동적쿼리)</h1>
+		<hr>
 		
 		<!-- 필름 검색 Start -->
+		<h3>검색</h3>
 		<!-- 검색어는 보이는게 좋으니까 get방식 사용 -->
-		<form method="get" action="<%=request.getContextPath()%>/filmListAction.jsp">
-			<select name="searchCol">
-				<option value="title">title</option>
-				<option value="description">description</option>
-				<option value="titleAndDescription">title + description</option>
-			</select>
-			<input type="text" name= "searchWord">
-			<button type="submit">검색</button>
-		</form>
+		<div>
+			<form method="get" action="<%=request.getContextPath()%>/filmListAction.jsp">
+				<table border="1">
+					<tr>
+						<th>검색</th>
+						<td>
+							<select name="searchCol">
+								<option value="title">title</option>
+								<option value="description">description</option>
+								<option value="titleAndDescription">title + description</option>
+							</select>
+							<input type="text" name="searchWord" placeholder="검색어">
+						</td>
+					</tr>
+					
+					<tr>
+						<th>대여료</th>
+						<td>
+							<input type="radio" name="rentalRate" value="0.99">0.99
+							<input type="radio" name="rentalRate" value="2.99">2.99
+							<input type="radio" name="rentalRate" value="4.99">4.99
+						</td>
+					</tr>
+					<tr>
+						<th>상영시간</th>
+						<td>
+							<select name="length">
+								<option value="">~1시간</option>
+								<option value="">1시간~2시간</option>
+								<option value="">2시간~</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>등급</th>
+						<td>
+							<select name="rating">
+								<option value="">G</option>
+								<option value="">PG</option>
+								<option value="">PG-13</option>
+								<option value="">R</option>
+								<option value="">NC-17</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<button type="submit">검색</button>
+			</form>
+		</div>
 		<!-- 필름 검색 End -->
 		
 		<!-- 필름 목록 Start -->
