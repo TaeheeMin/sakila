@@ -59,37 +59,6 @@
 							<input type="text" name="searchWord" placeholder="검색어">
 						</td>
 					</tr>
-					
-					<tr>
-						<th>대여료</th>
-						<td>
-							<input type="radio" name="rentalRate" value="0.99">0.99
-							<input type="radio" name="rentalRate" value="2.99">2.99
-							<input type="radio" name="rentalRate" value="4.99">4.99
-						</td>
-					</tr>
-					<tr>
-						<th>상영시간</th>
-						<td>
-							<select name="length">
-								<option value="">~1시간</option>
-								<option value="">1시간~2시간</option>
-								<option value="">2시간~</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<th>등급</th>
-						<td>
-							<select name="rating">
-								<option value="">G</option>
-								<option value="">PG</option>
-								<option value="">PG-13</option>
-								<option value="">R</option>
-								<option value="">NC-17</option>
-							</select>
-						</td>
-					</tr>
 				</table>
 				<button type="submit">검색</button>
 			</form>
